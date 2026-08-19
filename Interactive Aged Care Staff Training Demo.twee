@@ -1,0 +1,944 @@
+:: StoryTitle
+Interactive Aged Care Staff Training Demo
+
+
+:: StoryData
+{
+  "ifid": "A1B2C3D4-E5F6-4789-ABCD-EF1234567890",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Welcome",
+  "zoom": 1
+}
+
+
+:: Choice_Q1 {"position":"650,275","size":"100,100"}
+<<set $maxScore to $maxScore + 1>>
+<<run $completed.pushUnique("choice")>>
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="scenario-label">Scenario 3 · Choice & Dignity</div>
+	<h1>Supporting choice – Mrs. Thompson</h1>
+
+	<p>Mrs. Thompson, 79, has mild cognitive impairment but can still make many everyday decisions. It is mid-morning and she is still in her nightwear. The lifestyle calendar shows a gentle exercise group starts in 20 minutes. She says:</p>
+	<p><em>“I don’t feel like going today. I’d rather stay in my room and listen to my music.”</em></p>
+	<p>A colleague comments quietly to you: “She always says that. Just get her ready – she’ll enjoy it once she’s there.”</p>
+
+	<p><strong>What do you do?</strong></p>
+
+	<div class="choices">
+		[[Follow your colleague’s advice and firmly encourage her to get ready for the group|Choice_Wrong1]]
+		[[Respect her stated preference, explore whether she would like any support to join later or an alternative activity, and document the choice|Choice_Right1]]
+		[[Tell her she has to go because it is on her care plan|Choice_Wrong2]]
+	</div>
+</div>
+
+
+:: Choice_Right1 {"position":"1025,275","size":"100,100"}
+<<set $score to $score + 1>>
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Rights-based and person-centred</strong>
+		You have respected her current preference while remaining open to support if she changes her mind.
+	</div>
+
+	<p>Later that afternoon Mrs. Thompson asks if she can have a shower now instead of the usual evening time because she feels sticky after sitting in the sun. The care plan lists evening showers.</p>
+	<p><strong>Best response?</strong></p>
+
+	<div class="choices">
+		[[“Sorry, showers are only in the evening according to the schedule.”|Choice_Wrong3]]
+		[[“Of course – let’s organise that for you now. We can adjust the plan.”|Choice_Right2]]
+		[[Check with the nurse first and leave her waiting|Choice_Tip1]]
+	</div>
+</div>
+
+
+:: Choice_Right2 {"position":"150,400","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Excellent</strong>
+		Flexible, responsive care that honours small everyday choices builds trust and upholds dignity.
+	</div>
+
+	<p>At the end of the shift a family member asks why their mother “wasn’t made” to attend the exercise group. They are worried about her mobility.</p>
+	<p><strong>How do you respond?</strong></p>
+
+	<div class="choices">
+		[[Agree that you should have insisted and apologise|Choice_Wrong4]]
+		[[Explain calmly that you supported her choice on the day, that she remains encouraged to join when she wishes, and offer to discuss mobility goals with the care team and family|Choice_Right3]]
+	</div>
+</div>
+
+
+:: Choice_Right3 {"position":"400,400","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Professional and balanced</strong>
+		You protected the resident’s autonomy while remaining open to collaborative care planning with the family.
+	</div>
+
+	<div class="feedback tip">
+		<strong>Dignity & choice – reminders</strong>
+		<ul style="margin:0.4rem 0 0 1.1rem; padding:0;">
+			<li>Everyday choices matter (clothing, timing of care, activities, food)</li>
+			<li>Capacity is decision-specific – many people can decide simple matters even if they need support with complex ones</li>
+			<li>Document preferences and any support provided</li>
+			<li>Involve the person in care planning whenever possible</li>
+			<li>When safety concerns exist, use the least restrictive option and involve the wider team</li>
+		</ul>
+	</div>
+
+	<div class="choices">
+		[[Return to Scenario Menu|Menu]]
+	</div>
+</div>
+
+
+:: Choice_Tip1 {"position":"25,400","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback tip">
+		<strong>Sometimes necessary for clinical reasons, but often not</strong>
+		Many personal care timing changes can be accommodated by care staff within their scope.
+	</div>
+	<div class="choices">
+		[[See preferred response|Choice_Right2]]
+	</div>
+</div>
+
+
+:: Choice_Wrong1 {"position":"775,275","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>This overrides her autonomy</strong>
+		Even well-intentioned persuasion that ignores a clear preference can undermine dignity and rights. People have the right to refuse activities.
+	</div>
+	<div class="choices">
+		[[Choose a rights-based approach|Choice_Right1]]
+	</div>
+</div>
+
+
+:: Choice_Wrong2 {"position":"900,275","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Care plans guide – they do not remove choice</strong>
+		Care plans should reflect the person’s preferences. Forcing participation is not person-centred.
+	</div>
+	<div class="choices">
+		[[Choose a rights-based approach|Choice_Right1]]
+	</div>
+</div>
+
+
+:: Choice_Wrong3 {"position":"1150,275","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Overly rigid</strong>
+		Routines exist to support care, not to restrict reasonable requests that promote comfort and dignity.
+	</div>
+	<div class="choices">
+		[[See preferred response|Choice_Right2]]
+	</div>
+</div>
+
+
+:: Choice_Wrong4 {"position":"275,400","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundC.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Do not undermine the resident’s right to choose</strong>
+		Apologising for respecting a preference sends the wrong message about autonomy.
+	</div>
+	<div class="choices">
+		[[See balanced response|Choice_Right3]]
+	</div>
+</div>
+
+
+:: Dementia_Q1 {"position":"400,25","size":"100,100"}
+<<set $maxScore to $maxScore + 1>>
+<<run $completed.pushUnique("dementia")>>
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="scenario-label">Scenario 1 · Dementia Communication</div>
+	<h1>Morning approach – Mrs. Chen</h1>
+
+	<p>You are starting the morning shift. Mrs. Chen, 84, lives with moderate dementia. She is sitting in her armchair looking distressed and repeatedly saying:</p>
+	<p><em>“I need to go home to cook dinner for my children.”</em></p>
+	<p>She does not appear to recognise you today.</p>
+
+	<p><strong>What is your first action?</strong></p>
+
+	<div class="choices">
+		[[Approach quickly, correct her firmly, and tell her she is already home|Dementia_Wrong1]]
+		[[Kneel or sit at her eye level, smile gently, and say “Good morning Mrs. Chen. I’m here to help you.”|Dementia_Right1]]
+		[[Ignore the comment and start packing her clothes to “go home” to avoid conflict|Dementia_Wrong2]]
+	</div>
+</div>
+
+
+:: Dementia_Right1 {"position":"775,25","size":"100,100"}
+<<set $score to $score + 1>>
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Good choice</strong>
+		Getting to eye level, using a calm tone, and offering a warm greeting helps build trust and reduces the chance of startling her. You have acknowledged her as a person first.
+	</div>
+
+	<p>Mrs. Chen looks at you briefly and repeats “I have to cook for the children… they’re coming home soon.”</p>
+	<p><strong>How do you respond next?</strong></p>
+
+	<div class="choices">
+		[[“You’re confused. Your children are grown up and this is your home now.”|Dementia_Wrong3]]
+		[[“It sounds like looking after your family was really important to you. Tell me about the meals you used to cook.”|Dementia_Right2]]
+		[[Change the subject abruptly to the weather or the next activity|Dementia_Tip1]]
+	</div>
+</div>
+
+
+:: Dementia_Right2 {"position":"1150,25","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Excellent</strong>
+		You validated the emotion and the meaning behind her words without arguing about the facts. This often reduces distress and opens a pathway to redirection.
+	</div>
+
+	<p>After a short conversation about her favourite recipes, Mrs. Chen seems calmer. You still need to support her with morning personal care.</p>
+	<p><strong>Best next step?</strong></p>
+
+	<div class="choices">
+		[[“Let’s get you washed and dressed now so we can start the day.”|Dementia_Wrong4]]
+		[[“Would you like to come with me to the bathroom so we can freshen up together? I can help you.”|Dementia_Right3]]
+		[[Leave and come back later because she might refuse|Dementia_Tip2]]
+	</div>
+</div>
+
+
+:: Dementia_Right3 {"position":"275,150","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Well done</strong>
+		You offered choice, used inclusive language (“together”), and kept the request simple and respectful.
+	</div>
+
+	<div class="feedback tip">
+		<strong>Key takeaways – Dementia communication</strong>
+		<ul style="margin:0.4rem 0 0 1.1rem; padding:0;">
+			<li>Approach from the front at eye level</li>
+			<li>Validate feelings rather than correct facts</li>
+			<li>Use short, clear sentences and offer simple choices</li>
+			<li>Allow time for processing</li>
+			<li>Watch body language and tone – they often matter more than words</li>
+		</ul>
+	</div>
+
+	<div class="choices">
+		[[Return to Scenario Menu|Menu]]
+	</div>
+</div>
+
+
+:: Dementia_Tip1 {"position":"1025,25","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback tip">
+		<strong>Possible, but weaker</strong>
+		Abrupt topic changes can sometimes work as distraction, but they miss the chance to connect emotionally. Validation first usually produces better results.
+	</div>
+
+	<div class="choices">
+		[[See the preferred response|Dementia_Right2]]
+	</div>
+</div>
+
+
+:: Dementia_Tip2 {"position":"150,150","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback tip">
+		<strong>Sometimes necessary, but not ideal as first option</strong>
+		If a resident is highly distressed you may need to give space, but often a gentle, choice-based invitation succeeds.
+	</div>
+
+	<div class="choices">
+		[[See recommended approach|Dementia_Right3]]
+	</div>
+</div>
+
+
+:: Dementia_Wrong1 {"position":"525,25","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Not recommended</strong>
+		Correcting a person living with dementia about their reality often increases distress and can escalate behaviour. Firm correction can feel confrontational.
+	</div>
+
+	<p>Try a different approach.</p>
+
+	<div class="choices">
+		[[← Go back and choose again|Dementia_Q1]]
+	</div>
+</div>
+
+
+:: Dementia_Wrong2 {"position":"650,25","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Not recommended</strong>
+		Going along with packing to leave can create further confusion and safety risks. It also misses the opportunity to validate feelings and redirect gently.
+	</div>
+
+	<div class="choices">
+		[[← Go back and choose again|Dementia_Q1]]
+	</div>
+</div>
+
+
+:: Dementia_Wrong3 {"position":"900,25","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Avoid direct contradiction</strong>
+		Telling someone they are “confused” or correcting facts usually increases anxiety. Validation is more effective than reality orientation in moments of distress.
+	</div>
+
+	<div class="choices">
+		[[See the preferred response|Dementia_Right2]]
+	</div>
+</div>
+
+
+:: Dementia_Wrong4 {"position":"25,150","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundA.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Too directive</strong>
+		Commands can trigger resistance. Offering choice and framing it as a shared activity works better.
+	</div>
+
+	<div class="choices">
+		[[See recommended approach|Dementia_Right3]]
+	</div>
+</div>
+
+
+:: End {"position":"525,400","size":"100,100"}
+<div class="card-content">
+	<div class="center">
+		<div class="score-pill">Final Score: $score / $maxScore</div>
+		<h1>Training Complete</h1>
+	</div>
+
+	<p>Thank you for working through the scenarios.</p>
+
+	<<if $score gte $maxScore * 0.8>>
+		<div class="feedback correct">
+			<strong>Strong performance</strong>
+			You consistently chose person-centred, safe approaches.
+		</div>
+	<<elseif $score gte $maxScore * 0.5>>
+		<div class="feedback tip">
+			<strong>Solid effort</strong>
+			Review the feedback in any scenarios where you scored lower and try them again if you wish.
+		</div>
+	<<else>>
+		<div class="feedback wrong">
+			<strong>Room to grow</strong>
+			Consider revisiting the scenarios and focusing on the recommended pathways and key takeaway boxes.
+		</div>
+	<</if>>
+
+	<h2>Core principles reinforced</h2>
+	<ol>
+		<li><strong>Person-centred care</strong> – See the person first, not the task or the diagnosis.</li>
+		<li><strong>Validation over correction</strong> – Especially important in dementia care.</li>
+		<li><strong>Safety first, then comfort and dignity</strong> – In falls and emergencies.</li>
+		<li><strong>Everyday autonomy</strong> – Small choices build dignity and trust.</li>
+		<li><strong>Teamwork and documentation</strong> – Accurate information protects residents and staff.</li>
+	</ol>
+
+	<p style="font-size:0.9rem; color:#6b8f88;">This is a demonstration only. A full organisational program would normally include longer pathways, video examples, policy links, reflection questions and certificates.</p>
+
+	<div class="center">
+		[[Replay All Scenarios|Restart]]
+	</div>
+</div>
+
+
+:: Fall_Q1 {"position":"400,150","size":"100,100"}
+<<set $maxScore to $maxScore + 1>>
+<<run $completed.pushUnique("fall")>>
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="scenario-label">Scenario 2 · Falls Response</div>
+	<h1>Responding to a fall – Mr. Patel</h1>
+
+	<p>You hear a thud from Mr. Patel’s room. You enter and find him on the floor beside his bed. He is conscious, appears shaken, and says his left hip hurts. He is trying to push himself up.</p>
+
+	<p><strong>What should you do first?</strong></p>
+
+	<div class="choices">
+		[[Help him stand up immediately so he is not left on the floor|Fall_Wrong1]]
+		[[Stay with him, keep him still, and call for assistance while you assess|Fall_Right1]]
+		[[Leave quickly to get the nurse in charge first|Fall_Wrong2]]
+	</div>
+</div>
+
+
+:: Fall_Right1 {"position":"775,150","size":"100,100"}
+<<set $score to $score + 1>>
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Correct first response</strong>
+		Stay with the resident, prevent further movement, and summon help. This protects both the resident and you.
+	</div>
+
+	<p>You have called for assistance. While waiting, you perform a quick initial check.</p>
+	<p><strong>Which of the following is most appropriate right now?</strong></p>
+
+	<div class="choices">
+		[[Ask him to move his legs and arms to check for injury|Fall_Wrong3]]
+		[[Check responsiveness, look for obvious bleeding or deformity, note pain location, and keep him warm and calm|Fall_Right2]]
+		[[Give him a drink of water because he looks pale|Fall_Wrong4]]
+	</div>
+</div>
+
+
+:: Fall_Right2 {"position":"1150,150","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Good assessment priorities</strong>
+		Focus on safety, observation, and comfort while waiting for clinical support.
+	</div>
+
+	<p>The registered nurse arrives. After assessment it is decided Mr. Patel needs transfer to hospital for X-ray. He is becoming anxious and keeps saying “I don’t want to go to hospital.”</p>
+	<p><strong>How can you best support him while preparations are made?</strong></p>
+
+	<div class="choices">
+		[[Tell him he has no choice and must go|Fall_Wrong5]]
+		[[Acknowledge his feelings, explain simply what will happen, stay with him, and offer reassurance|Fall_Right3]]
+		[[Leave the conversation to the nurse only|Fall_Tip1]]
+	</div>
+</div>
+
+
+:: Fall_Right3 {"position":"275,275","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Supportive approach</strong>
+		Validating fear + clear simple information + presence = better experience for the resident.
+	</div>
+
+	<p>After the ambulance leaves, your supervisor asks you to complete the incident report and update the care plan notes.</p>
+	<p><strong>Which statement is true?</strong></p>
+
+	<div class="choices">
+		[[Only registered nurses complete incident reports|Fall_Wrong6]]
+		[[All staff who were involved or witnessed the event should contribute accurate, factual information promptly|Fall_Right4]]
+	</div>
+</div>
+
+
+:: Fall_Right4 {"position":"525,275","size":"100,100"}
+<<set $score to $score + 1>>
+<<set $maxScore to $maxScore + 1>>
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback correct">
+		<strong>Correct</strong>
+		Timely, factual documentation supports resident safety, continuous improvement, and regulatory requirements.
+	</div>
+
+	<div class="feedback tip">
+		<strong>Falls response – key points</strong>
+		<ul style="margin:0.4rem 0 0 1.1rem; padding:0;">
+			<li>Do not leave the resident alone</li>
+			<li>Do not move them until assessed</li>
+			<li>Call for help early</li>
+			<li>Observe ABC + pain + obvious injury</li>
+			<li>Provide calm reassurance</li>
+			<li>Document accurately and promptly</li>
+			<li>Participate in post-fall review and prevention planning</li>
+		</ul>
+	</div>
+
+	<div class="choices">
+		[[Return to Scenario Menu|Menu]]
+	</div>
+</div>
+
+
+:: Fall_Tip1 {"position":"150,275","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback tip">
+		<strong>Teamwork is good, but you can still help</strong>
+		Personal care staff often have the strongest relationship with the resident and can provide valuable reassurance.
+	</div>
+	<div class="choices">
+		[[See preferred support|Fall_Right3]]
+	</div>
+</div>
+
+
+:: Fall_Wrong1 {"position":"525,150","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Do not move him yet</strong>
+		Moving a resident after a fall before assessment can worsen an injury (especially possible fracture or head injury).
+	</div>
+	<div class="choices">
+		[[← Choose again|Fall_Q1]]
+	</div>
+</div>
+
+
+:: Fall_Wrong2 {"position":"650,150","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Do not leave him alone</strong>
+		A resident who has fallen should not be left unsupervised. Call for help while remaining with him.
+	</div>
+	<div class="choices">
+		[[← Choose again|Fall_Q1]]
+	</div>
+</div>
+
+
+:: Fall_Wrong3 {"position":"900,150","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Avoid unnecessary movement</strong>
+		Asking him to move limbs may worsen an injury. Observe and ask about pain without forcing movement.
+	</div>
+	<div class="choices">
+		[[See better approach|Fall_Right2]]
+	</div>
+</div>
+
+
+:: Fall_Wrong4 {"position":"1025,150","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Not appropriate yet</strong>
+		Do not give food or drink until assessment is complete and any head injury or need for surgery has been considered.
+	</div>
+	<div class="choices">
+		[[See better approach|Fall_Right2]]
+	</div>
+</div>
+
+
+:: Fall_Wrong5 {"position":"25,275","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Avoid dismissing his feelings</strong>
+		Even when transfer is necessary, acknowledging fear and providing clear, calm information reduces distress.
+	</div>
+	<div class="choices">
+		[[See preferred support|Fall_Right3]]
+	</div>
+</div>
+
+
+:: Fall_Wrong6 {"position":"400,275","size":"100,100"}
+<img class="featured-image" src="Resources/BackgroundB.jpg" alt="A Bedroom">
+<div class="card-content">
+	<div class="feedback wrong">
+		<strong>Incorrect</strong>
+		Incident reporting is a whole-team responsibility. Accurate first-hand information from care staff is essential.
+	</div>
+	<div class="choices">
+		[[See correct statement|Fall_Right4]]
+	</div>
+</div>
+
+
+:: Menu {"position":"275,25","size":"100,100"}
+<div class="card-content">
+	<div class="score-pill">Score: $score / $maxScore</div>
+	<h1>Choose a Scenario</h1>
+	<p>Complete all three to unlock the final summary.</p>
+
+	<div class="choices">
+		<<if not $completed.includes("dementia")>>
+			[[1. Dementia Communication|Dementia_Q1]]
+		<<else>>
+			<span style="opacity:0.6; padding:0.9rem 1.2rem; display:block;">1. Dementia Communication ✅</span>
+		<</if>>
+
+		<<if not $completed.includes("fall")>>
+			[[2. Responding to a Fall|Fall_Q1]]
+		<<else>>
+			<span style="opacity:0.6; padding:0.9rem 1.2rem; display:block;">2. Responding to a Fall ✅</span>
+		<</if>>
+
+		<<if not $completed.includes("choice")>>
+			[[3. Choice & Dignity|Choice_Q1]]
+		<<else>>
+			<span style="opacity:0.6; padding:0.9rem 1.2rem; display:block;">3. Choice & Dignity ✅</span>
+		<</if>>
+	</div>
+
+	<<if $completed.length gte 3>>
+		<div class="center mt-1">
+			[[View Final Summary →|End]]
+		</div>
+	<<else>>
+		<p class="mt-1" style="font-size:0.9rem; color:#6b8f88;"><em>Complete all scenarios to finish.</em></p>
+	<</if>>
+</div>
+
+
+:: Restart {"position":"650,400","size":"100,100"}
+<<set $score to 0>>
+<<set $maxScore to 0>>
+<<set $completed to []>>
+<<goto "Welcome">>
+
+
+:: StoryInit {"position":"25,25","size":"100,100"}
+/* ========== CONFIGURATION – EDIT THESE VALUES ========== */
+
+/* Score tracking */
+<<set $score to 0>>
+<<set $maxScore to 0>>
+<<set $completed to []>>
+/* Optional: set a global background image URL (leave empty for solid colour "") */
+<<set $bgImage to "">>
+/* Example: <<set $bgImage to "https://example.com/soft-gradient.jpg">> */
+
+/* ====================================================== */
+
+/* Hide the SugarCube sidebar completely */
+<<run UIBar.destroy()>>
+
+
+:: Welcome {"position":"150,25","size":"100,100"}
+<<if $bgImage>>
+	<<run $("body").addClass("has-bg-image").css("background-image", `url(${$bgImage})`)>>
+<<else>>
+	<<run $("body").removeClass("has-bg-image").css("background-image", "none")>>
+<</if>>
+
+<div class="card-content">
+	<div class="center">
+		<div class="score-pill">Staff Training Demo</div>
+		<h1>Welcome</h1>
+		<p>This short interactive module helps aged care staff practise person-centred responses in realistic situations.</p>
+	</div>
+
+	<p>You will work through three short scenarios:</p>
+	<ul>
+		<li>Communicating with a resident living with dementia</li>
+		<li>Responding to a fall</li>
+		<li>Supporting resident choice and dignity</li>
+	</ul>
+
+	<p>Each choice gives immediate feedback. There is no time limit — take your time and read the explanations.</p>
+
+	<div class="center">
+		[[Start Training →|Menu]]
+	</div>
+</div>
+
+
+:: StoryStylesheet [stylesheet]
+/* =========================================================
+   AGED CARE TRAINING – RESPONSIVE TEMPLATE STYLESHEET
+   Edit the CSS variables below to change the look of the whole story.
+   ========================================================= */
+
+:root {
+	/* ---- COLOURS ---- */
+	--bg-color: #fdf6f0;                 /* soft warm page background */
+	--card-bg: #ffffff;                  /* centre content card */
+	--card-border: #f5d5c0;              /* soft warm border */
+
+	--accent: #f89b35;                   /* primary orange */
+	--accent-dark: #e07d20;              /* darker orange for hover */
+	--accent-mid: #f37744;               /* coral */
+	--accent-soft: #f16372;              /* pink-red */
+
+	--text-main: #4a4a4a;                /* medium grey body text */
+	--text-heading: #3d3d3d;             /* darker grey headings */
+	--text-muted: #7a7a7a;               /* lighter grey for labels */
+
+	--correct-bg: #e8f5e9;
+	--correct-border: #43a047;
+	--wrong-bg: #fdecea;
+	--wrong-border: #e53935;
+	--tip-bg: #fff8e1;
+	--tip-border: #f9a825;
+
+	--choice-bg: #fff5eb;                /* very light orange */
+	--choice-border: #f5c9a0;
+	--choice-hover: #f37744;             /* coral on hover */
+	--choice-text: #3d3d3d;              /* grey text on buttons */
+
+	/* ---- TYPOGRAPHY ---- */
+	--font-main: "Segoe UI", system-ui, -apple-system, sans-serif;
+	--font-size-base: 1.05rem;
+	--line-height: 1.55;
+
+	/* ---- LAYOUT ---- */
+	--card-max-width: 720px;
+	--card-radius: 16px;
+	--choice-radius: 12px;
+	--spacing: 1.25rem;
+}
+
+/* ---- RESET & BASE ---- */
+html {
+	height: 100%;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	min-height: 100vh;
+	font-family: var(--font-main);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height);
+	color: var(--text-main);
+	background-color: var(--bg-color);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+body.has-bg-image {
+	background-color: transparent;
+}
+
+/* Hide SugarCube UI bar */
+#ui-bar, #ui-bar-body, #ui-bar-tray, #ui-bar-history {
+	display: none !important;
+}
+#story {
+	margin-left: 0 !important;
+}
+
+/* ---- MAIN PASSAGE CONTAINER ---- */
+#passages {
+	max-width: var(--card-max-width);
+	margin: 0 auto;
+	padding: 1.5rem 1rem 3rem;
+}
+
+.passage {
+	background: var(--card-bg);
+	border-radius: var(--card-radius);
+	border: 1px solid var(--card-border);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+	padding: 0;
+	overflow: hidden;
+}
+
+/* Featured image */
+.featured-image {
+	width: 100%;
+	height: auto;
+	max-height: 220px;
+	object-fit: cover;
+	display: block;
+	background: #fde8d8;
+}
+
+/* Content area */
+.card-content {
+	padding: 1.75rem 1.75rem 2rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+	color: var(--text-heading);
+	margin-top: 0;
+	line-height: 1.3;
+}
+h1 { font-size: 1.6rem; margin-bottom: 0.6rem; }
+h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.1rem; }
+
+/* Scenario label */
+.scenario-label {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--text-muted);
+	margin-bottom: 0.35rem;
+	font-weight: 600;
+}
+
+/* Score pill */
+.score-pill {
+	display: inline-block;
+	background: var(--accent);
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 600;
+	padding: 0.35rem 0.9rem;
+	border-radius: 20px;
+	margin-bottom: 1rem;
+}
+
+/* Feedback boxes */
+.feedback {
+	padding: 1rem 1.15rem;
+	border-radius: 10px;
+	margin: 1.1rem 0;
+	border-left: 5px solid;
+}
+.feedback.correct {
+	background: var(--correct-bg);
+	border-color: var(--correct-border);
+}
+.feedback.wrong {
+	background: var(--wrong-bg);
+	border-color: var(--wrong-border);
+}
+.feedback.tip {
+	background: var(--tip-bg);
+	border-color: var(--tip-border);
+}
+.feedback strong {
+	display: block;
+	margin-bottom: 0.25rem;
+}
+
+/* ---- CHOICE BUTTONS ---- */
+.choices {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin-top: 1.4rem;
+}
+
+.choices a,
+a.choice-btn {
+	display: block;
+	background: var(--choice-bg);
+	color: var(--choice-text) !important;
+	border: 2px solid var(--choice-border);
+	border-radius: var(--choice-radius);
+	padding: 0.95rem 1.2rem;
+	text-decoration: none !important;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.4;
+	transition: all 0.18s ease;
+	text-align: left;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.choices a:hover,
+a.choice-btn:hover {
+	background: var(--choice-hover);
+	color: white !important;
+	border-color: var(--choice-hover);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 14px rgba(243, 119, 68, 0.28);
+}
+
+/* Primary button */
+a.btn-primary {
+	display: inline-block;
+	background: var(--accent);
+	color: white !important;
+	border: none;
+	border-radius: 10px;
+	padding: 0.85rem 1.6rem;
+	font-weight: 600;
+	text-decoration: none !important;
+	margin-top: 1rem;
+	transition: background 0.15s ease;
+}
+a.btn-primary:hover {
+	background: var(--accent-dark);
+	color: white !important;
+}
+
+/* Secondary button */
+a.btn-secondary {
+	display: inline-block;
+	background: transparent;
+	color: var(--accent-mid) !important;
+	border: 2px solid var(--accent-mid);
+	border-radius: 10px;
+	padding: 0.7rem 1.4rem;
+	font-weight: 600;
+	text-decoration: none !important;
+	margin-top: 0.8rem;
+}
+a.btn-secondary:hover {
+	background: var(--accent-mid);
+	color: white !important;
+}
+
+/* Utility */
+.center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+	html, body {
+		background-attachment: scroll;
+	}
+}
+
+@media (max-width: 600px) {
+	#passages {
+		padding: 1rem 0.6rem 2.5rem;
+	}
+	.card-content {
+		padding: 1.3rem 1.15rem 1.6rem;
+	}
+	h1 { font-size: 1.4rem; }
+	.choices a {
+		padding: 0.9rem 1rem;
+		font-size: 0.98rem;
+	}
+	.featured-image {
+		max-height: 160px;
+	}
+}
+
+@media (max-width: 380px) {
+	.card-content {
+		padding: 1.1rem 0.9rem 1.4rem;
+	}
+}
